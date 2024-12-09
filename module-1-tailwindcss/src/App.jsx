@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [darkmod, setDarkMod] = useState(false);
+  const [darkMode, setDarkMod] = useState(false);
 
   return (
     <>
@@ -32,6 +30,15 @@ function App() {
       </div>
 
       {/** dark mode toggle */}
+      <div className={`${darkMode ? "dark" : ""} dark:bg-gray-500 h-screen p-4`}>
+        <div>
+          <p className={`${darkMode ? "text-white" : ""}`}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore incidunt eos minima perferendis eaque laboriosam, illo obcaecati sed fuga soluta hic quam ratione labore molestiae earum tempore molestias! Saepe, magnam.</p>
+          <button
+            onClick={() => setDarkMod(!darkMode)}
+            className='p-4 rounded text-white bg-green-500 mt-2'
+          >Toggle</button>
+        </div>
+      </div>
     </>
   )
 }
