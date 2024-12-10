@@ -39,6 +39,11 @@ function App() {
           >Toggle</button>
         </div>
       </div>
+
+      <div>
+        <button className='my-btn'>Button</button> 
+      </div>
+
     </>
   )
 }
