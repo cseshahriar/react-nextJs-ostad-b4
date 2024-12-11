@@ -32,7 +32,6 @@ function App() {
               <div className="bg-blue-500 h-20 m-2 p-2"> Col 3</div>
               <div className="bg-yellow-500 h-20 m-2 p-2"> Col 4</div>
           </div>
-
           {/** dark mode toggle */}
           <div className={`${darkMode ? "dark" : ""} dark:bg-gray-500 p-4`}>
               <div>
@@ -190,6 +189,21 @@ function App() {
               This element has a custom background color and text color.
           </div>
       </>
+      {/** dark mode toggle */}
+      <div className={`${darkMode ? "dark" : ""} dark:bg-gray-500 h-screen p-4`}>
+        <div>
+          <p className={`${darkMode ? "text-white" : ""}`}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore incidunt eos minima perferendis eaque laboriosam, illo obcaecati sed fuga soluta hic quam ratione labore molestiae earum tempore molestias! Saepe, magnam.</p>
+          <button
+            onClick={() => setDarkMod(!darkMode)}
+            className='p-4 rounded text-white bg-green-500 mt-2'
+          >Toggle</button>
+        </div>
+      </div>
+
+      <div>
+        <button className='my-btn'>Button</button> 
+      </div>
+    </>
   )
 }
 
