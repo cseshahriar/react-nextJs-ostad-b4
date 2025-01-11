@@ -1,0 +1,20 @@
+npm create vite@latest tailwind-basic -- --template react
+cd tailwind-basic
+npm install
+
+with react/next
+---------------
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm run dev
+
+tailwind.config.js
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
