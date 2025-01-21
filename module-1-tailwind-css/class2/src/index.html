@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="dark:bg-gray-950 dark:text-white m-4">
+    <h1 class="text-[100px]">Hello</h1>
+    <button onclick="toggle()" class="bg-red-900 text-white rounded-lg p-4 hover:bg-red-500">Toggle</button>
+
+    <script>
+        let flag = false;
+        function toggle() {
+            if(!flag) {
+                console.log('if start', flag);
+                document.querySelector("body").classList.add("dark");
+                flag = true;
+                console.log('if end', flag);
+            } else {
+                console.log('else', flag);
+                document.querySelector("body").classList.remove("dark");
+                flag = false;
+            }
+        }
+    </script>
+</body>
+</html>
