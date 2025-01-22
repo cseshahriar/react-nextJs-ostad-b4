@@ -4,6 +4,10 @@ module.exports = {
   // darkMode: "media", // os
   darkMode: "selector",
   theme: {
+    screens:{
+      mobile: "400px",
+      tab: '700px', /* custom break point */
+    },
     extend: {},
   },
   plugins: [],

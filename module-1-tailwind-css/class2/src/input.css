@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* layer directive like work tailwind default utility class, utility priority first */
+@layer components {
+    .btn{
+        @apply p-2;
+    }
+}
