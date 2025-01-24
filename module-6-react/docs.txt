@@ -1,0 +1,10 @@
+npx create-react-app my-first-react-app
+npm create vite@latest my-react-first-app --template react
+ y
+ react
+ javascript
+
+cd my-react-first-app
+npm install
+npm run dev
+1.27"
