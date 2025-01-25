@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home'
 import Course from './components/Course';
 import Form from './components/Form';
-import Layout from '../src/Layout'
+import Layout from './Layout'
 
 function App() {
   return (
