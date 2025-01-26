@@ -1,13 +1,16 @@
-import React, { useEffect, useState} from 'react'
+import { useEffect, useState} from 'react'
 
 const Apilist = () => {
     const [todos, setTodos] = useState(null);
 
+    // component mount hoar pore call hoy
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response => response.json())
         .then(json => setTodos(json))
     }, [])
+
+    // useLayoutEffect call before render page
 
     return (
         <div>
