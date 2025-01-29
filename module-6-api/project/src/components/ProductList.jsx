@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react'
 
-const ProductList = ({ products = [] }) => {
+const ProductList = ({ products = [], dispatch}) => {
     const [searchItem, setSearchItem] = useState("");
     const [minPrice, setMinPrice] = useState(0);
 
@@ -43,12 +43,13 @@ const ProductList = ({ products = [] }) => {
                     onChange={handleMinPrice}
                 />
                 {/**  handleMinPrice or onChange={(e) => setMinPrice(e.target.value)}  re-render issue */}
+                <button onClick={() => dispatch({type: 'add', payload: {id: Math.random(), name:`I phone ${Math.random()}`, price: 100 }})}>Add Product</button>
             </div>
 
             <ul>
                 { filterProducts.map((item) => (
                     <li key={item.id}>
-                        {item.name} - {item.price}
+                        {item.name} - {item.price} - <button onClick={() => dispatch({type: 'delete', payload: item})}>Delete</button>
                     </li>
                 ))}
             </ul>
