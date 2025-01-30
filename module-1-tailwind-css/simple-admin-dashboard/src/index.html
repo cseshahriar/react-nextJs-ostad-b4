@@ -7,7 +7,35 @@
   <title>Tailwind Admin Layout</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-slate-500">
- hello
+<body class="bg-slate-100 flex flex-col min-h-screen">
+    <header class="bg-blue-500 p-4 text-center font-bold">header</header>
+
+    <div class="flex flex-grow">
+        <aside class="w-3/12 bg-gray-300 rounded-md shadow-md p-6 h-auto">
+            <h1 class="text-2xl font-semibold mb-4">Sidebar</h1>
+            <ul class="text-blue-700 w-full">
+                <li class="mb-5 px-4 py-2 hover:bg-lime-300 rounded-lg"><a href="" class="rounded-lg">Sidebar item 01</a></li>
+                <li class="mb-5 px-4 py-2 hover:bg-lime-300 rounded-lg"><a href="" class="rounded-lg">Sidebar item 02</a></li>
+                <li class="mb-5 px-4 py-2 hover:bg-lime-300 rounded-lg"><a href="" class="rounded-lg">Sidebar item 03</a></li>
+                <li class="mb-5 px-4 py-2 hover:bg-lime-300 rounded-lg"><a href="" class="rounded-lg">Sidebar item 04</a></li>
+            </ul>
+        </aside>
+
+        <main class="flex-1 bg-slate-200 flex-grow">
+            <div class="container mx-auto">
+                <!-- grid for row/cols -->
+                <div class="grid grid-cols-3 gap-6 m-2">
+                    <section>01</section>
+                    <section>02</section>
+                    <section>03</section>
+                    <section>04</section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-blue-500 text-white p-4 text-center sticky bottom-0">
+        <p>&copy; cseshahriar</p>
+    </footer>
 </body>
 </html>
