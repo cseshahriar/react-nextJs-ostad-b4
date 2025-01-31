@@ -7,11 +7,14 @@
   <title>Tailwind Admin Layout</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-slate-100 flex flex-col min-h-screen">
-    <header class="bg-blue-500 p-4 text-center font-bold">header</header>
+<body class="bg-slate-100 flex flex-col min-h-screen dark:bg-gray-900">
+    <header class="bg-blue-500 p-4 text-center font-bold">
+        header
+        <button class="mt-2 bg-gray-200 text-black py-2 px-4 rounded font-bold dark:bg-blue-500"  id="theme-toggle">Dark Mode</button>
+    </header>
 
     <div class="flex flex-grow">
-        <aside class="w-3/12 bg-gray-300 rounded-md shadow-md p-6 h-auto">
+        <aside class="w-3/12 bg-gray-300 rounded-md shadow-md p-6 h-auto dark:bg-slate-800">
             <h1 class="text-2xl font-semibold mb-4">Sidebar</h1>
             <ul class="text-blue-700 w-full">
                 <li class="mb-5 px-4 py-2 hover:bg-lime-300 rounded-lg"><a href="" class="rounded-lg">Sidebar item 01</a></li>
@@ -114,5 +117,13 @@
     <footer class="bg-blue-500 text-white p-4 text-center sticky bottom-0">
         <p>&copy; cseshahriar</p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const htmlElement = document.documentElement;
+        themeToggle.addEventListener("click", () => {
+            htmlElement.classList.toggle("dark");
+        })
+    </script>
 </body>
 </html>

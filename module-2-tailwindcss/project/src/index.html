@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Tailwind Admin Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-100 flex flex-col min-h-screen dark:bg-gray-900">
+    <header class="bg-blue-500 p-4 text-center font-bold  dark:bg-slate-800 sticky top-0">
+        <button class="mt-2 bg-gray-200 text-black py-2 px-4 rounded font-bold dark:bg-blue-500"  id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <div class="flex flex-grow">
+
+        <!-- sidebar -->
+        <aside class="w-3/12 bg-gray-300 rounded-md shadow-md p-6 h-auto dark:bg-slate-800">
+            <div class="flex items-center mb-8">
+                <img src="https://avatar.iran.liara.run/public" alt="" class="w-32 h-32 object-fill rounded-full border-lime-100" />
+                <h2 class="text-2xl font-semibold text-gray-700 dark:text-white ml-2">Company Name</h2>
+            </div>
+            <ul class="space-y-4">
+                <li class="px-4 py-3 rounded-lg hover:bg-stone-200 hover:text-gray-700">
+                    <a href="#" class="rounded-lg">Dashboard</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg hover:bg-stone-200 hover:text-gray-700">
+                    <a href="#" class="rounded-lg">Product</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg hover:bg-stone-200 hover:text-gray-700">
+                    <a href="#" class="rounded-lg">Settings</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg hover:bg-stone-200 hover:text-gray-700">
+                    <a href="#" class="rounded-lg">Report</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- main content -->
+        <main class="flex-1 bg-slate-200 flex-grow">
+            <div class="container mx-auto">
+                <!-- grid for row/cols -->
+                <h2 class="text-xl font-semibold text-gray-600 mt-5 ml-3">Image Gallery</h2>
+
+                <div class="grid grid-cols-3 gap-6 m-2 overflow-scroll"> <!-- h-52 -->
+
+                    <div class="max-w-[500px] rounded overflow-hidden relative bg-white shadow-lg p-4">
+                        <!-- Image -->
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg" alt="image"
+                                class="object-cover w-full h-full rounded-md shadow-lg" />
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
+                            Featured
+                        </div>
+                        <div class="py-4 px-4 flex flex-1 flex-col">
+                            <div class="font-bold text-xl mb-2">The Birds</div>
+                            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="text-blue-400 underline">See more</a>
+
+                            <!-- Image Meta -->
+                            <div class="flex justify-between gap-5 mt-5">
+                                <div class="flex gap-4">
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Views</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Downloads</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Share</button>
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Download</button>
+                                </div>
+                            </div>
+
+                            <!-- Tags (Remove absolute positioning) -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Bird</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Nature</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Wildlife</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- apply gradient -->
+                    <div class="max-w-[500px] rounded overflow-hidden relative bg-white shadow-lg p-4">
+                        <!-- Image -->
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg" alt="image"
+                                class="object-cover w-full h-full rounded-md shadow-lg" />
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
+                            Featured
+                        </div>
+                        <div class="py-4 hover:bg-gradient-to-t hover:from-orange-200 hover:via-red-200 hover:to-purple-200">
+                            <div class="font-bold text-xl mb-2">The Birds</div>
+                            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="text-blue-400 underline">See more</a>
+
+                            <!-- Image Meta -->
+                            <div class="flex justify-between gap-5 mt-5">
+                                <div class="flex gap-4">
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Views</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Downloads</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Share</button>
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Download</button>
+                                </div>
+                            </div>
+
+                            <!-- Tags (Remove absolute positioning) -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Bird</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Nature</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Wildlife</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-[500px] rounded overflow-hidden relative bg-white shadow-lg p-4">
+                        <!-- Image -->
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg" alt="image"
+                                class="object-cover w-full h-full rounded-md shadow-lg" />
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
+                            Featured
+                        </div>
+                        <div class="py-4">
+                            <div class="font-bold text-xl mb-2">The Birds</div>
+                            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="text-blue-400 underline">See more</a>
+
+                            <!-- Image Meta -->
+                            <div class="flex justify-between gap-5 mt-5">
+                                <div class="flex gap-4">
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Views</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Downloads</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Share</button>
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Download</button>
+                                </div>
+                            </div>
+
+                            <!-- Tags (Remove absolute positioning) -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Bird</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Nature</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Wildlife</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="max-w-[500px] rounded overflow-hidden relative bg-white shadow-lg p-4">
+                        <!-- Image -->
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://farm4.staticflickr.com/3075/3168662394_7d7103de7d_z_d.jpg" alt="image"
+                                class="object-cover w-full h-full rounded-md shadow-lg" />
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded-bl-lg">
+                            Featured
+                        </div>
+                        <div class="py-4">
+                            <div class="font-bold text-xl mb-2">The Birds</div>
+                            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="text-blue-400 underline">See more</a>
+
+                            <!-- Image Meta -->
+                            <div class="flex justify-between gap-5 mt-5">
+                                <div class="flex gap-4">
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Views</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-gray-600 text-base leading-5">Downloads</p>
+                                        <p class="font-semibold">43,434</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Share</button>
+                                    <button class="border border-gray-400 shadow-md px-3 py-2">Download</button>
+                                </div>
+                            </div>
+
+                            <!-- Tags (Remove absolute positioning) -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Bird</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Nature</span>
+                                <span class="bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800">#Wildlife</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-blue-500 text-white p-4 text-center sticky bottom-0  dark:bg-slate-800">
+        <p>&copy; cseshahriar</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const htmlElement = document.documentElement;
+        themeToggle.addEventListener("click", () => {
+            htmlElement.classList.toggle("dark");
+        })
+    </script>
+</body>
+</html>
