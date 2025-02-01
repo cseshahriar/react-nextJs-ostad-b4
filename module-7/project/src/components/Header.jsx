@@ -12,10 +12,10 @@ const Header = () => {
 
     <nav id="navmenu" className="navmenu">
         <ul>
-        <li><NavLink to="/" className="active">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/services">Services</NavLink></li>
-        <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+        <li><NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}>Home</NavLink></li>
+        <li><NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>About</NavLink></li>
+        <li><NavLink to="/services" className={({isActive}) => isActive ? 'active' : ''}>Services</NavLink></li>
+        <li><NavLink to="/portfolio" className={({isActive}) => isActive ? 'active' : ''}>Portfolio</NavLink></li>
         <li className="dropdown"><NavLink to="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></NavLink>
             <ul>
             <li><NavLink to="#">Dropdown 1</NavLink></li>
@@ -33,7 +33,7 @@ const Header = () => {
             <li><NavLink to="#">Dropdown 4</NavLink></li>
             </ul>
         </li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''}>Contact</NavLink></li>
         </ul>
         <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
