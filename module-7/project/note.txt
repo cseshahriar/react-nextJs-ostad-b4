@@ -1,0 +1,4 @@
+mutable: changeable
+immutable: non changeable
+useRef: data store when component rendering, prev data store, without component
+        render data store
