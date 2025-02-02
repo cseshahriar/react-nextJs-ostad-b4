@@ -8,9 +8,8 @@ cd react-basic/
 npm install
 npm install -D tailwindcss@3.4.17 postcss autoprefixer
 npx tailwindcss init -p
-
-
+-------------------------------------------------------
 npm create vite@latest my-react-app --template react
- cd project
-  npm install
-  npm run dev
+cd project
+npm install
+npm run dev
