@@ -13,3 +13,15 @@ npm create vite@latest my-react-app --template react
 cd project
 npm install
 npm run dev
+--------------------------------------------------------
+npm create vite@latest tailwindcss-components -- --template react
+cd tailwindcss-components/
+npm install
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
+npx tailwindcss init -p
+
+content: ["./src/**/*.{js,jsx,ts,tsx}"], // Include JSX/TSX files
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
