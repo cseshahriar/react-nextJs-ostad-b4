@@ -3,6 +3,7 @@ import Searchable from './components/Searchable';
 import FormInputs from './components/FormInputs';
 import ListView from './components/ListView';
 import AuthForm from './components/AuthForm';
+import PaymentForm from './components/PaymentForm';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <FormInputs/>
         <ListView/>
         <AuthForm/>
+        <PaymentForm/>
     </div>
   );
 }
