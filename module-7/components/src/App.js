@@ -26,8 +26,8 @@ function App() {
         <RatingCard/>
         <TabLayout />
         */}
-        <h1 className='font-bold text-xl'>Sidebar</h1>
         <SidebarLayout />
+
     </div>
   );
 }
