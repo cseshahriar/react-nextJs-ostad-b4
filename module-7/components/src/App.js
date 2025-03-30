@@ -6,6 +6,7 @@ import AuthForm from './components/AuthForm';
 import PaymentForm from './components/PaymentForm';
 import OtpForm from './components/OtpForm';
 import PriceCard from './components/PriceCard';
+import RatingCard from './components/RatingCard';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <AuthForm/>
         <PaymentForm/>
         <OtpForm/>
-        */}
         <PriceCard />
+        */}
+        <RatingCard/>
     </div>
   );
 }
