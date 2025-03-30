@@ -5,6 +5,7 @@ import ListView from './components/ListView';
 import AuthForm from './components/AuthForm';
 import PaymentForm from './components/PaymentForm';
 import OtpForm from './components/OtpForm';
+import PriceCard from './components/PriceCard';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
         <ListView/>
         <AuthForm/>
         <PaymentForm/>
-         */}
         <OtpForm/>
+        */}
+        <PriceCard />
     </div>
   );
 }
