@@ -7,6 +7,8 @@ import PaymentForm from './components/PaymentForm';
 import OtpForm from './components/OtpForm';
 import PriceCard from './components/PriceCard';
 import RatingCard from './components/RatingCard';
+import TabLayout from './components/TabLayout';
+import SidebarLayout from './components/SidebarLayout';
 
 function App() {
   return (
@@ -21,8 +23,11 @@ function App() {
         <PaymentForm/>
         <OtpForm/>
         <PriceCard />
-        */}
         <RatingCard/>
+        <TabLayout />
+        */}
+        <h1 className='font-bold text-xl'>Sidebar</h1>
+        <SidebarLayout />
     </div>
   );
 }
