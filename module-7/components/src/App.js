@@ -10,6 +10,7 @@ import RatingCard from './components/RatingCard';
 import TabLayout from './components/TabLayout';
 import SidebarLayout from './components/SidebarLayout';
 
+
 function App() {
   return (
     <div id='app' className="flex flex-col gap-4">

@@ -1,6 +1,9 @@
 import { Bars3Icon, SpeakerXMarkIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import React, { useState } from 'react'
 import SummaryCard from './SummaryCard';
+import DataTable from './DataTable';
+
+import { Table } from "antd";
 
 const SidebarLayout = () => {
   const [isOpen, setIsOpen] = useState();
@@ -13,6 +16,39 @@ const SidebarLayout = () => {
     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75732 17.657L12 13.4144L16.2426 17.657L12 21.8996L7.75732 17.657ZM10.5858 17.657L12 16.2428L13.4142 17.657L12 19.0712L10.5858 17.657Z" fill="black"/>
     </svg>
   );
+
+  const dataSource = [
+    {
+      key: '1',
+      name: 'Mike',
+      age: 32,
+      address: '10 Downing Street',
+    },
+    {
+      key: '2',
+      name: 'John',
+      age: 42,
+      address: '10 Downing Street',
+    },
+  ];
+
+  const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Age',
+      dataIndex: 'age',
+      key: 'age',
+    },
+    {
+      title: 'Address',
+      dataIndex: 'address',
+      key: 'address',
+    },
+  ];
 
   const settingIcon = (
     <svg
@@ -77,13 +113,17 @@ const SidebarLayout = () => {
             <span className='font-bold text-lg'>Header</span>
           </header>
 
-          <main>
+          <main className='px-4 py-2'>
             {/** Dashboard summary card */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 p-4'>
               <SummaryCard label={'Sales'} text={'2000'} color={"text-orange-500"} />
               <SummaryCard label={'Revenue'} text={'2000'}  color={"text-blue-500"} />
               <SummaryCard label={'Order'} text={'2000'} />
             </div>
+
+            {/* <DataTable /> */}
+            <Table dataSource={dataSource} columns={columns} pagination={{pageSize:1, total:50}} />
+
           </main>
         </div>
     </div>
