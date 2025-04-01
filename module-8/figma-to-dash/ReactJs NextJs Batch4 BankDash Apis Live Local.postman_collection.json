@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "92cc187c-8fce-42c8-85e4-3c362f0dc9e2",
+		"name": "ReactJs NextJs Batch4 BankDash Apis Live Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6229600"
+	},
+	"item": [
+		{
+			"name": "expense-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/expense-create?category=Others&value=35",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"expense-create"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Others"
+						},
+						{
+							"key": "value",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expense-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/expense-list",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"expense-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weekly-activity-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/weekly-activity-list",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"weekly-activity-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weekly-activity-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/weekly-activity-create?days=Fri&deposit=10000&withdraw=40000",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"weekly-activity-create"
+					],
+					"query": [
+						{
+							"key": "days",
+							"value": "Fri"
+						},
+						{
+							"key": "deposit",
+							"value": "10000"
+						},
+						{
+							"key": "withdraw",
+							"value": "40000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "card-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/card-list",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"card-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "card-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/card-create?card_number=88845679999&name=Rasel Ahmed&balance=5000&validity=2027-10-10",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"card-create"
+					],
+					"query": [
+						{
+							"key": "card_number",
+							"value": "88845679999"
+						},
+						{
+							"key": "name",
+							"value": "Rasel Ahmed"
+						},
+						{
+							"key": "balance",
+							"value": "5000"
+						},
+						{
+							"key": "validity",
+							"value": "2027-10-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recent-transactions-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mst.Mahfuza Khanam",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "4200",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/F:/desktop30-11-2024/dummy images/1-child-girl-school-student-studying-in-a-classroom-GDB38N.jpg"
+						},
+						{
+							"key": "date",
+							"value": "2025-11-12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/recent-transactions-create",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"recent-transactions-create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Md.Sadikul Islam",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "500",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recent-transactions-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://inertia-pos.manirul.xyz/api/recent-transactions-list",
+					"protocol": "http",
+					"host": [
+						"inertia-pos",
+						"manirul",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"recent-transactions-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
