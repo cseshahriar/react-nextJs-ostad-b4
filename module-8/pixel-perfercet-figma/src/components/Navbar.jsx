@@ -44,7 +44,7 @@ const Navbar = () => {
 
                 <div>
                   <Link to="#"
-                    className="bg-[#2196F3] px-[22px] py-[16px] text-[16px] font-medium text-[#fff] rounded-[8px] leading-none uppercase">Register</Link>
+                    className="reg-css">Register</Link>
                 </div>
 
                 <div>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,4 +12,10 @@
     bottom: -4px;
     left: 0;
     border-radius: 5px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.reg-css {
+    @apply bg-[#2196F3] px-[22px] py-[16px] text-[16px] font-medium text-[#fff] rounded-[8px] leading-none uppercase;
 }
