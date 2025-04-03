@@ -18,6 +18,7 @@ import ProductProcessingDemo from "./pages/ProductProcessingDemo.jsx";
 const ProtectedRoute = ({ children, requiredRole }) => {
   const { user, token } = useAuth();
 
+  console.log('role ', user?.role)
   // Check if user is authenticated (has a token)
   if (!token) {
     // Redirect to login if not authenticated
@@ -33,6 +34,7 @@ const ProtectedRoute = ({ children, requiredRole }) => {
   // If authenticated and role matches (or no role required), render the children
   return children;
 };
+
 
 const App = () => {
   return (

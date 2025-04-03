@@ -12,7 +12,7 @@ const ProductDetailsPage = () => {
 
   // Queries
   const query = useQuery({
-    queryKey: ["product", params.slug],
+    queryKey: ["product", params.slug],  // must unique
     queryFn: () =>
       fetchProductDetails(params.slug).then((data) => {
         return data;

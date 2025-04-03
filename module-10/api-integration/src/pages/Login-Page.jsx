@@ -10,6 +10,7 @@ const loginSchema = z.object({
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
+// admin@mail.com 123456
 const LoginPage = () => {
   const { login } = useAuth();
   const navigate = useNavigate();

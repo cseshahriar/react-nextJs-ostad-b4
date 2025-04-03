@@ -99,7 +99,7 @@ const ProductManagement = () => {
   const createMutation = useMutation({
     mutationFn: createProduct,
     onSuccess: () => {
-      queryClient.invalidateQueries(["products", currentPage]);
+      queryClient.invalidateQueries(["products", currentPage]); // re fetch after create
       reset();
     },
     onError: (err) => console.error("Create error:", err),

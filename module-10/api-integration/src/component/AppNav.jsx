@@ -13,7 +13,9 @@ const AppNav = () => {
   return (
     <div className="navbar fixed top-0 bg-white z-50 px-20 drop-shadow-lg bg-base-100">
       <div className="flex-1">
+      <Link to="/">
         <img className="w-20" src="/images/logo.png" alt="Logo" />
+      </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-2">

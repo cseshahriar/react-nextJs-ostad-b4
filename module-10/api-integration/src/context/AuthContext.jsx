@@ -3,7 +3,8 @@ import axios from "axios";
 
 const AuthContext = createContext();
 
-const BASE_URL = "https://ecom-rs8e.onrender.com/api";
+// https://dev.to/ebereplenty/how-to-use-environment-variables-in-a-reactjs-app-with-vite-3lh0
+const BASE_URL = import.meta.env.VITE_BASE_URL || "https://ecom-rs8e.onrender.com/api";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -16,12 +17,34 @@ export function AuthProvider({ children }) {
     localStorage.getItem("token")
   );
 
+  // when run use effect: when run component and change dependencies
   useEffect(() => {
     if (token && !user) {
       console.log("Token found, fetching profile...");
       fetchProfile();
     }
   }, [token]);
+
+  const fetchProfile = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      console.log("Fetching profile with token:", token);
+      const response = await axios.get(`${BASE_URL}/auth/profile`, {
+        headers: { token },
+      });
+
+      console.log("Profile response:", response.data);
+      setUser(response.data.data || response.data); // Adjust based on API response
+    } catch (err) {
+      console.error("Profile fetch error:", err.response?.data || err.message);
+      setError(err.response?.data?.message || "Failed to fetch profile");
+      logout();
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const login = async (email, password) => {
     try {
@@ -97,27 +120,6 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const fetchProfile = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-
-      console.log("Fetching profile with token:", token);
-      const response = await axios.get(`${BASE_URL}/auth/profile`, {
-        headers: { token },
-      });
-
-      console.log("Profile response:", response.data);
-      setUser(response.data.data || response.data); // Adjust based on API response
-    } catch (err) {
-      console.error("Profile fetch error:", err.response?.data || err.message);
-      setError(err.response?.data?.message || "Failed to fetch profile");
-      logout();
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const updateProfile = async (profileData) => {
     try {
       setLoading(true);
@@ -167,6 +169,7 @@ export function AuthProvider({ children }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
+// auth hock is a function
 export function useAuth() {
   const context = useContext(AuthContext);
   if (!context) {
