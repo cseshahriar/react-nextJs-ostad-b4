@@ -1,0 +1,76 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "todo": "Do something nice for someone you care about",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "todo": "Memorize a poem",
+      "completed": true,
+      "title": ""
+    },
+    {
+      "id": "3",
+      "todo": "Watch a classic movi",
+      "completed": true,
+      "title": "Watch a classic movief"
+    },
+    {
+      "id": "4",
+      "todo": "Watch a documentaryf",
+      "completed": false,
+      "title": "Watch a documentary"
+    },
+    {
+      "id": "5",
+      "todo": "Invest in cryptocurrency",
+      "completed": false,
+      "title": "Invest in cryptocurrency"
+    },
+    {
+      "id": "9cb5",
+      "todo": "test1",
+      "completed": false
+    },
+    {
+      "id": "77ff",
+      "todo": "test2",
+      "completed": false
+    },
+    {
+      "id": "522e",
+      "todo": "test3",
+      "completed": false
+    },
+    {
+      "id": "566b",
+      "todo": "test4",
+      "completed": false
+    },
+    {
+      "id": "9d9d",
+      "todo": "test5",
+      "completed": false
+    },
+    {
+      "id": "7e7c",
+      "todo": "test6",
+      "completed": false
+    },
+    {
+      "id": "e496",
+      "todo": "test7",
+      "completed": false
+    },
+    {
+      "id": "1953",
+      "todo": "test8",
+      "completed": false
+    }
+  ],
+  "total": 5,
+  "skip": 0,
+  "limit": 5
+}
