@@ -1,0 +1,9 @@
+https://www.shadcnblocks.com/block/navbar1/
+https://ui.stackzero.co/docs/blocks/product-cards
+https://tanstack.com/table/latest
+https://ui.shadcn.com/docs/components/command
+https://fakeapi.platzi.com/
+https://fakestoreapi.com/docs
+https://dummyjson.com/products
+https://fakeapi.platzi.com/
+https://fakeapi.platzi.com/en/rest/products
