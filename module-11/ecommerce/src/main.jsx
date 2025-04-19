@@ -16,10 +16,13 @@ import Collection from './pages/Collection'
 
 // admin
 import AdminHome from './pages/admin/AdminHome'
+import Products from './pages/admin/Products'
+import Orders from './pages/admin/Orders'
 
 // auth
 import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
+import NotFound from './components/NotFound'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -31,13 +34,15 @@ createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="collection" element={<Collection />} />
+          <Route path="collections" element={<Collection />} />
           <Route path="cart" element={<Cart />} />
         </Route>
 
         {/* Admin routes */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminHome />} />
+          <Route path='products' element={<Products />} />
+          <Route path='orders' element={<Orders />} />
         </Route>
 
         {/* Auth routes */}
@@ -46,6 +51,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="register" element={<Register />} />
         </Route>
 
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

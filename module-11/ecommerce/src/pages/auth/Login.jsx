@@ -4,11 +4,40 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
+const schema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8, "Password must be at least 8 character long.")
+})
 
 export default function Login() {
+  const navigate = useNavigate()
+
+  const form = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      email : "",
+      password: ""
+    }
+  });
+
+  const { handleSubmit } = form
+
+  const onSubmit = (data) => {
+    console.log('data', data);
+
+    // perform login action here
+    navigate("/")
+  }
+
+
   return (
-    <form className={cn("flex flex-col gap-6")}>
+    <form className={cn("flex flex-col gap-6")} onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Login to your account</h1>
         <p className="text-balance text-sm text-muted-foreground">
@@ -16,10 +45,13 @@ export default function Login() {
         </p>
       </div>
       <div className="grid gap-6">
+
         <div className="grid gap-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="m@example.com" required />
+          <Input id="email" type="email" placeholder="m@example.com" required
+          { ...form.register("email")} />
         </div>
+
         <div className="grid gap-2">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
@@ -30,11 +62,13 @@ export default function Login() {
               Forgot your password?
             </a>
           </div>
-          <Input id="password" type="password" required />
+          <Input id="password" type="password" required { ...form.register("password")} />
         </div>
+
         <Button type="submit" className="w-full">
           Login
         </Button>
+
         <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
           <span className="relative z-10 bg-background px-2 text-muted-foreground">
             Or continue with

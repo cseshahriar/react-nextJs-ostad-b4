@@ -1,31 +1,24 @@
 import React from 'react'
 import { Outlet } from "react-router"
 
-const AdminLayout = () => {
-  return (
-    <div className='flex'>
-        {/** sidebar */}
-        <div className='w-1/4 bg-gray-800 text-white p-4 h-screen'>
-            <h2 className='text-xl font-bold'>Admin Sidebar</h2>
-            <ul className="mt-4">
-                <li className='mb-2'>
-                    <a href='/admin/dashboard'>Dashboard</a>
-                </li>
-                <li className='mb-2'>
-                    <a href='/admin/users'>Users</a>
-                </li>
-                <li className='mb-2'>
-                    <a href='/admin/settings'>Settings</a>
-                </li>
-            </ul>
-        </div>
+import { AppSidebar } from "@/components/app-sidebar"
+import { SiteHeader } from "@/components/site-header"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 
-        {/** main */}
-        <div className='w-3/4 p-4 bg-gray-100'>
-            <Outlet />
+
+export default function AdminLayout() {
+  return (
+    <SidebarProvider>
+      <AppSidebar variant="inset" />
+      <SidebarInset>
+        <div className="flex flex-1 flex-col">
+          <div className="@container/main flex flex-1 flex-col gap-2">
+            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6 px-6">
+                <Outlet/>
+            </div>
+          </div>
         </div>
-    </div>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }
-
-export default AdminLayout

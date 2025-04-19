@@ -7,3 +7,5 @@ https://fakestoreapi.com/docs
 https://dummyjson.com/products
 https://fakeapi.platzi.com/
 https://fakeapi.platzi.com/en/rest/products
+
+1:43
