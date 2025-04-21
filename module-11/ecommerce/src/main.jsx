@@ -24,35 +24,41 @@ import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
 import NotFound from './components/NotFound'
 
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
+        <QueryClientProvider client={queryClient}>
+          <BrowserRouter>
+            <Routes>
 
-        {/* Website routes */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="collections" element={<Collection />} />
-          <Route path="cart" element={<Cart />} />
-        </Route>
+              {/* Website routes */}
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="collections" element={<Collection />} />
+                <Route path="cart" element={<Cart />} />
+              </Route>
 
-        {/* Admin routes */}
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<AdminHome />} />
-          <Route path='products' element={<Products />} />
-          <Route path='orders' element={<Orders />} />
-        </Route>
+              {/* Admin routes */}
+              <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<AdminHome />} />
+                <Route path='products' element={<Products />} />
+                <Route path='orders' element={<Orders />} />
+              </Route>
 
-        {/* Auth routes */}
-        <Route path="/auth" element={<AuthLayout />}>
-          <Route index element={<Login />} />
-          <Route path="register" element={<Register />} />
-        </Route>
+              {/* Auth routes */}
+              <Route path="/auth" element={<AuthLayout />}>
+                <Route index element={<Login />} />
+                <Route path="register" element={<Register />} />
+              </Route>
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </QueryClientProvider>
   </StrictMode>
 )

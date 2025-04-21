@@ -8,4 +8,5 @@ https://dummyjson.com/products
 https://fakeapi.platzi.com/
 https://fakeapi.platzi.com/en/rest/products
 
-1:43
+https://github.com/srj101/ostad-ecommerce-project/blob/main/src/components/commerce-ui/filter-sidebar.jsx
+https://github.com/srj101/ostad-ecommerce-project/tree/main/src/components/commerce-ui
