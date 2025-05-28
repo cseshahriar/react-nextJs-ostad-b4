@@ -18,7 +18,7 @@ const Collection = () => {
     queryFn: () => getProduct(offset, limit),
   })
 
-  console.log('data ', data?.products)
+  console.log('product data ', data?.products)
 
   const handlePageChange = (page) => {
     const newOffset = (page - 1) * limit
@@ -28,7 +28,6 @@ const Collection = () => {
   return (
     <div className='flex flex-col px-6 py-6'>
       <h2 className="text-2xl font-bold mb-6">All Products</h2>
-
       <div className='grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto w-full'>
         {isLoading
           ? Array.from({ length: limit }, (_, index) => <SkeletonCard key={index} />)

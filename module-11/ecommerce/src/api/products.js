@@ -23,3 +23,48 @@ export const getProduct = async (offset, limit) => {
 
     return { products, totalItems };
   };
+
+
+// get all product
+export const getAllProduct = async () => {
+    const productUrl = `https://api.escuelajs.co/api/v1/products`;
+    const response = await fetch(productUrl);
+    const products = await response.json();
+    return products;
+};
+
+
+//  create product
+export const createProduct = async (product) => {
+    const productUrl = `https://api.escuelajs.co/api/v1/products`;
+    const response = await fetch(productUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    });
+    return response.json();
+};
+
+//  update product
+export const updateProduct = async (product) => {
+    const productUrl = `https://api.escuelajs.co/api/v1/products/${product.id}`;
+    const response = await fetch(productUrl, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    });
+    return response.json();
+};
+
+// delete method
+export const deleteProduct = async (product) => {
+    const productUrl = `https://api.escuelajs.co/api/v1/products/${product.id}`;
+    const response = await fetch(productUrl, {
+      method: 'DELETE',
+    });
+    return response.json();
+};

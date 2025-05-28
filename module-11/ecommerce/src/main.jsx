@@ -17,6 +17,7 @@ import Collection from './pages/Collection'
 // admin
 import AdminHome from './pages/admin/AdminHome'
 import Products from './pages/admin/Products'
+import CreateProduct from './components/CreateProduct'
 import Orders from './pages/admin/Orders'
 
 // auth
@@ -47,6 +48,7 @@ createRoot(document.getElementById('root')).render(
               <Route path="/admin" element={<AdminLayout />}>
                 <Route index element={<AdminHome />} />
                 <Route path='products' element={<Products />} />
+                <Route path='products/create' element={<CreateProduct />} />
                 <Route path='orders' element={<Orders />} />
               </Route>
 
