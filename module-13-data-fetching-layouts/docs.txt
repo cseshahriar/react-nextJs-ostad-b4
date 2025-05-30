@@ -6,6 +6,8 @@ npx prisma init
 .env
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/nextjsdb?schema=public"
 
+npm install @prisma/client
+
 # config
 generator client {
   provider = "prisma-client-js"
@@ -13,11 +15,14 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+
 # migration
 npx prisma migrate dev --name init
+npx prisma db push
 
 
 schema.schema:
