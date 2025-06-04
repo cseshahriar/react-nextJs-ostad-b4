@@ -3,9 +3,12 @@ import style from './aboutstyle.module.css'
 import Image from 'next/image'
 import pic from '../../../public/images/shahriar.jpeg'
 
-const page = () => {
+const page = ({searchParams}) => {
   return (
     <div className={style.text}>
+      Params Name: {searchParams.name} <br/>
+      Params Price: {searchParams.price} <br/>
+
       <p className='font-16'>16px</p>
         <Image
         src="/images/shahriar.jpeg"
